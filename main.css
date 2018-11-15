@@ -1,0 +1,90 @@
+.one, .two, .three{
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    background: blue;
+    color: floralwhite;
+    border-style: outset;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "one two three"
+    "time time time"
+    "time time time"
+    "time time time"
+    "buttons buttons buttons";
+    width: 60%;
+    margin: 0 auto;
+}
+
+.one {
+    grid-area: one;
+    cursor: pointer;
+}
+
+.two {
+    grid-area: two;
+    cursor: pointer;
+}
+.three {
+    grid-area: three;
+    cursor: pointer;
+}
+
+.time {
+    grid-area: time;
+    text-align: center;
+    justify-content: center;
+    font-size: 48px;
+    padding-top: 60px;
+}
+
+.buttons {
+    grid-area: buttons;
+    display: flex;
+    justify-content: center;
+}
+
+.start, .stop, .reset {
+    text-align: center;
+    justify-content: center;
+}
+.start {
+    margin-right: 10px;
+}
+
+.start button {
+    background-color: greenyellow;
+    
+}
+
+.stop {
+    margin-right: 10px;
+}
+
+.stop button {
+    background-color: darksalmon;
+}
+
+.reset button {
+    background-color: azure;
+}
+
+button {
+    width: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 500px){
+    .one, .two, .three {
+        height: 15px;
+        font-size: 10px;
+        color: whitesmoke;
+        padding-bottom: 7px;
+    }
+}
